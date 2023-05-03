@@ -5,4 +5,4 @@ beach.split("fisf")
 beach.split("sun")
 
 print(beach)
-print(x)
+print(x)#It is not finished yet
