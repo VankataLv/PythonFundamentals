@@ -9,6 +9,12 @@ if len(coins) > beggars:
             current_beggar_earnings += int(coins[i])
         beggar_earnings.insert(beggar, current_beggar_earnings)
         current_beggar_earnings = 0
+    print(beggar_earnings)
 
+elif len(coins) == beggars:
+    print([int(coin) for coin in coins])
 
-print(beggar_earnings)
+else:
+    for insufficient_coins in range(beggars - len(coins)):
+        coins.append(str(0))
+        print([int(coin) for coin in coins])

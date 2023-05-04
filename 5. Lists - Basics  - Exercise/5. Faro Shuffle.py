@@ -1,12 +1,17 @@
-card_input = input()
-original_deck = card_input.split(" ")
+deck_cards = input().split(" ")
 faro_shuffles = int(input())
-top_card = original_deck[0]
-bottom_card = original_deck[-1]
-original_deck.pop(0)
-original_deck.pop(-1)
-for shuffles in range(faro_shuffles):
-    original_deck.reverse()
-original_deck.insert(0, top_card)
-original_deck.append(bottom_card)
-print(original_deck)
+middle_deck = int(len(deck_cards) / 2)
+current_deck = list()
+
+for shuffle in range(faro_shuffles):
+    current_deck = list()                   # Every for loop iteration you re-initialize the current list
+    top_deck = deck_cards[:middle_deck]     # 0, 1, 2
+    bottom_deck = deck_cards[middle_deck:]  # 3, 4, 5
+
+    for card_index in range(middle_deck):     # 0, 1, 2
+        current_deck.append(top_deck[card_index])
+        current_deck.append(bottom_deck[card_index])
+    deck_cards = current_deck
+
+print(deck_cards)
+

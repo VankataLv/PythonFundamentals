@@ -1,6 +1,9 @@
 user_input = input()
 team_A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 team_B = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+# --variant--
+# team_a = ["A-" + str(s) for s in range(1, 12)]
+# same for team_b "B"
 red_cards_log = user_input.split(" ")
 team_punished = ""
 player_punished = ""
