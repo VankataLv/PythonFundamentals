@@ -8,7 +8,7 @@ numbers_my_list = [1, 2, 3, 6, 8, 99, 5, 2, 2]
 # numbers_my_list.sort()
 # print(numbers_my_list)
 
-# ---- THis how u save the "popped" value from a list
+# ---- THis how u save the "popped" index from a list
 # char = numbers_my_list.pop()
 # print(numbers_my_list)
 # print(char)
