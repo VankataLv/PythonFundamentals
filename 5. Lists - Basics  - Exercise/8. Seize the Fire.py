@@ -7,7 +7,7 @@ for iteration in range(len(admin_list)):                            # how many t
     current_value_admin_list = admin_list[iteration]                # get the values for the current iteration
     type_fire, value_cell = current_value_admin_list.split(" = ")   # split the values in variables for current iteration
     value_cell = int(value_cell)                                    # after split convert value_cell to int IOT compare it for validity
-
+                                                                    # code can be simplified with any([....])
     if type_fire == "High":                                         # check if value_cell is valid
         if value_cell not in range(81, 126):                        # 81 , 126 because range ending is not inclusive (81, (125 + 1))
             continue                                                # invalid cell value
