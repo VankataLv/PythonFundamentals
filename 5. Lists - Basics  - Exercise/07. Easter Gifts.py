@@ -12,7 +12,7 @@ while command != "No Money":
                 if presents[i] == gift_value[0]:
                     presents[i] = "None"
 
-    elif gift_status == "Required":                 # in this case gift_value is a list with {gift}, {index}
+    elif gift_status == "Required":                     # in this case gift_value is a list with {gift}, {index}
         if int(gift_value[1]) < len(presents):
             value_change_index = int(gift_value[1])
             presents.pop(value_change_index)
@@ -20,6 +20,7 @@ while command != "No Money":
         elif int(gift_value[1]) == len(presents):
             presents.pop()
             presents.append(gift_value[0])
+
     elif gift_status == "JustInCase":
         presents.pop()
         presents.append(gift_value[0])
@@ -27,6 +28,8 @@ while command != "No Money":
 for value in presents:
     if value != "None":
         print(value, end=" ")
+
+# inputs below___________________________
 
 # Eggs StuffedAnimal Cozonac Sweets EasterBunny Eggs Clothes
 # OutOfStock Eggs

@@ -12,9 +12,9 @@ if len(coins) > beggars:
     print(beggar_earnings)
 
 elif len(coins) == beggars:
-    print([int(coin) for coin in coins])
+    print([int(coin) for coin in coins])                                # converting all the values in the string to integers so when print no " "
 
 elif len(coins) < beggars:
     for insufficient_coins in range(beggars - len(coins)):
-        coins.append(str(0))
-        print([int(coin) for coin in coins])
+        coins.append(str(0))                                            # add 0 at the end so that all beggars have a str associated with them
+        print([int(coin) for coin in coins])                            # converting all the values in the string to integers so when print no " "

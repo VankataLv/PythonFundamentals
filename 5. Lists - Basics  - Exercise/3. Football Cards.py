@@ -1,7 +1,7 @@
 user_input = input()
 team_A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 team_B = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-# --variant--
+# --variant-- so that u dont have to type all the letters, will be useful for longer lists
 # team_a = ["A-" + str(s) for s in range(1, 12)]
 # same for team_b "B"
 red_cards_log = user_input.split(" ")
