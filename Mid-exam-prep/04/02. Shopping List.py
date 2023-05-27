@@ -30,4 +30,5 @@ while command != "Go Shopping!":
             else:
                 command = input().strip()
                 continue
+    command = input().strip()
 print(", ".join(shopping_list))
