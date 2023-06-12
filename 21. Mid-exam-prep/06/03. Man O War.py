@@ -1,46 +1,37 @@
-pirate_ship = list(map(int, input().split(">")))
+pirate = list(map(int, input().split(">")))
 warship = list(map(int, input().split(">")))
-max_section_health = int(input())
+max_health = int(input())
 command = input()
 while command != "Retire":
-    if command[0:4] == "Fire":
-        action, index, damage = command.split(" ")
-        index = int(index)
-        damage = int(damage)
-        if index in range(-len(warship), len(warship)):
+    token = command.split(" ")
+    if token[0] == "Fire":
+        index, damage = int(token[1]), int(token[2])
+        if index in range(0, len(warship)):
             warship[index] -= damage
             if warship[index] <= 0:
                 print("You won! The enemy ship has sunken.")
                 quit()
-        else:
-            command = input()
-            continue
-    elif command[0:6] == "Defend":
-        action, start_index, end_index, damage = command.split(" ")
-        start_index = int(start_index)
-        end_index = int(end_index)
-        damage = int(damage)
-        if start_index in range(-len(pirate_ship), len(pirate_ship)) and end_index in range(-len(pirate_ship), len(pirate_ship)):     # check if range is valid
-            for section in range(start_index, end_index + 1):
-                pirate_ship[section] -= damage
-                if pirate_ship[section] <= 0:
+    elif token[0] == "Defend":
+        start_index, end_index, damage = int(token[1]), int(token[2]), int(token[3])
+        if start_index in range(0, len(pirate)) and end_index in range(0, len(pirate)):
+            for damaged_index in range(start_index, end_index + 1):
+                pirate[damaged_index] -= damage
+                if pirate[damaged_index] <= 0:
                     print("You lost! The pirate ship has sunken.")
                     quit()
-        else:
-            command = input()
-            continue
-    elif command[0:6] == "Repair":
-        action, index, health = command.split(" ")
-        index = int(index)
-        health = int(health)
-        if index in range(-len(pirate_ship), len(pirate_ship)):
-            pirate_ship[index] += health
-            if pirate_ship[index] > max_section_health:
-                pirate_ship[index] = max_section_health
-    elif command[0:7] == "Status":
-        repair_needed = [section for section in pirate_ship if section < max_section_health * 0.2]
-        print(f"{len(repair_needed)} sections need repair.")
+    elif token[0] == "Repair":
+        index, health = int(token[1]), int(token[2])
+        if index in range(0, len(pirate)):
+            pirate[index] += health
+            if pirate[index] > max_health:
+                pirate[index] = max_health
+    elif token[0] == "Status":
+        counter = 0
+        for section in pirate:
+            if section < 0.2 * max_health:
+                counter += 1
+        print(f"{counter} sections need repair.")
+    token.clear()
     command = input()
-
-print(f"Pirate ship status: {sum(pirate_ship)}")
+print(f"Pirate ship status: {sum(pirate)}")
 print(f"Warship status: {sum(warship)}")
