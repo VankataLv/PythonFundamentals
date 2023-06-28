@@ -9,7 +9,7 @@ x4 = float(input())
 y4 = float(input())
 
 # first line is (a1, b1) (a2, b2) -> forms triangle with sides a, b, c-hypo
-# second line is (d1, e1) (d2, e2) -> forms triangle with sides d, e, f-hypo
+# second line is (d1, e1) (d2, e2) -> forms triangle with sides d, e, el-hypo
 def pythagorian_theorem_hypo(a1, b1, a2, b2, d1, e1, d2, e2):
     side_a = abs(a1) + abs(a2)
     side_b = abs(b1) + abs(b2)

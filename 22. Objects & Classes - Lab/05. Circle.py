@@ -18,6 +18,6 @@ class Circle:
 
 
 # circle = Circle(10)
-# print(f"{circle.calculate_area():.2f}")
-# print(f"{circle.calculate_circumference():.2f}")
-# print(f"{circle.calculate_area_of_sector(5):.2f}")
+# print(el"{circle.calculate_area():.2f}")
+# print(el"{circle.calculate_circumference():.2f}")
+# print(el"{circle.calculate_area_of_sector(5):.2f}")
