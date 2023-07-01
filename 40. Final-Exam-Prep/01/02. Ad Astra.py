@@ -14,3 +14,5 @@ print(f"You have food to last you for: {floor(calories / 2000)} days!")
 for item in food_stores:
     cur_item = item.groupdict()
     print(f"Item: {cur_item['name']}, Best before: {cur_item['expdate']}, Nutrition: {cur_item['calories']}")
+
+# 66/100
