@@ -2,7 +2,7 @@ import re
 
 special_letters = ["s", "t", "a", "r"]
 n = int(input())
-pattern = r"@([A-za-z]+)[^/@/-/!/:/>]*:(\d+)[^/@/-/!/:/>]*![^/@/-/!/:/>]*(A|D)[^/@/-/!/:/>]*!->(\d+)"
+pattern = r"^[^/@/-/!/:/>]*@([A-za-z]+)[^/@/-/!/:/>]*:(\d+)[^/@/-/!/:/>]*![^/@/-/!/:/>]*(A|D)[^/@/-/!/:/>]*!->(\d+)[^/@/-/!/:/>]*$"
 attacked_planets = []
 destroyed_planets = []
 for line in range(n):
