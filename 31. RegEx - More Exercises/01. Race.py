@@ -32,3 +32,4 @@ places_names = {'1st place': results_by_distance[lst_ordered_distances[0]],
                 '3rd place': results_by_distance[lst_ordered_distances[2]]}
 for key, value in places_names.items():
     print(f"{key}: {value}")
+# 80/100 on judge?!
